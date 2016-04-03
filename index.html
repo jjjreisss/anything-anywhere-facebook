@@ -83,7 +83,14 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
-    FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+    FB.api(
+      '/photos',
+      'post',
+      {
+        message: 'Hello, world!',
+        url: "http://res.cloudinary.com/ddhru3qpb/image/upload/w_100,h_300/color-picker-80-500_uyhcxj.png"
+      }
+    );
   }
 </script>
 
